@@ -173,7 +173,9 @@ def writeDatFile(dats):
         else:
             adaptive = ""
 
-        fileName = "dat/TxRx{}_ARQ{}-{}_{}-{}{}_RTO{}_DC{}{}{}".format(distance, duplication, duplication, moleculeType, moleculeType, adaptive, rtoType, str(dc.getDC()).replace('.', ''), decomposing, fec)
+        messages = "_{}messages".format(dat.getParam("numMessages"))
+
+        fileName = "dat/TxRx{}_ARQ{}-{}_{}-{}{}_RTO{}_DC{}{}{}{}".format(distance, duplication, duplication, moleculeType, moleculeType, adaptive, rtoType, str(dc.getDC()).replace('.', ''), messages, decomposing, fec)
         print(fileName)
         rwt = calcRWT(rtoType, distance)
 

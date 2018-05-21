@@ -5,7 +5,7 @@ rtoType 2
 dc 0.5
 duplication 1,10,20,30,40,50
 moleculeType PASSIVE
-adaptive 0,1
+adaptive 0
 noise 0
 decomposingType 0
 useCollisions 1
